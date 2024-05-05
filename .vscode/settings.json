@@ -1,0 +1,8 @@
+{
+    "python.REPL.enableREPLSmartSend": false,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.extraPaths": [
+        "./src/services"
+    ]
+}
