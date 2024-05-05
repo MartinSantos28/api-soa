@@ -17,7 +17,7 @@ class TeacherServiceImpl(ITeacherService):
         return self.generated_response(self.repository.searchTeacher(id))
 
     def createTeacher(self, request : CreateTeacherRequest): 
-        teacher = Teachers(name = request.getName(), last_name = request.getLast_Name, assigment = request.getAssigment)
+        teacher = Teachers(name = request.getName(), last_name = request.getLast_Name(), assigment = request.getAssigment())
         return self.generated_response(self.repository.createTeacher(teacher))
     
     def updateTeacher(self, request : UpdateTeacherRequest):

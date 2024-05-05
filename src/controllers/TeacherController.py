@@ -27,7 +27,7 @@ def TeacherById(id):
     teacher = TeacherService.getTeacherById(id)
     return {'teachers' : teacher}
 
-@teachers_routes.route('/teachers/', methods=['PUT'])
+@teachers_routes.route('/teachers/<int:id>', methods=['PUT'])
 def updateTeacher(id):
     data = request.get_json()
     update_request = UpdateTeacherRequest(id,data['name'], data['last_name'], data['assigment'])

@@ -11,7 +11,7 @@ class TeachersRepository:
         return self.db.query(Teachers).all()
     
     def searchTeacher(self, id ): 
-        return self.db.query(Teachers).filter(Teachers).first()
+        return self.db.query(Teachers).filter(Teachers.id == id).first()
     
     def updateTeacher(self , teacher : Teachers):
         self.db.commit()
@@ -23,5 +23,5 @@ class TeachersRepository:
         
     def createTeacher(self, teacher : Teachers):
         self.db.add(teacher)
-        self.db.commit
+        self.db.commit()
         return teacher
